@@ -1,0 +1,14 @@
+# DESAFIO INTUITIVE CARE PARA A SELEÇÃO DE ESTÁGIO
+
+## COMO RODAR O PROJETO
+
+1. CRIE UM AMBIENTE VIRTUAL
+   `python -m venv venv`
+
+2. ATIVE O AMBIENTE VIRTUAL (DEPENDE DO SISTEMA)
+   `source .venv/bin/activate`
+
+3. INSTALE O JAVA NO SEU COMPUTADOR, POIS A LIB `tabula-py` UTILIZA ELE POR DEBAIXO DOS PANOS
+
+4. INSTALE AS DEPENDÊNCIAS
+   `python -m pip install -r requirements.txt`
