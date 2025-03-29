@@ -1,5 +1,12 @@
 # DESAFIO INTUITIVE CARE PARA A SELEÇÃO DE ESTÁGIO
 
+# ATENÇÃO!
+
+PARA PODER REALIZAR UM GIT CLONE, INSTALE O GIT LFS (GIT LARGE FILE STORAGE),
+CLIQUE AQUI NO [LINK](https://github.com/git-lfs/git-lfs?utm_source=gitlfs_site&utm_medium=installation_link&utm_campaign=gitlfs#installing).
+
+E DEPOIS RODE O COMANDO `git lfs install`
+
 ## AMBIENTE DO PROJETO
 
 PARA OS DESAFIOS DE WEB SCRAPING E TRANSFORMAÇÃO DE DADOS, EU CRIEI UMA PASTA `.src/services`
