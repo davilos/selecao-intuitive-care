@@ -1,0 +1,20 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: mysql_intuitive_care
+    restart: always
+    environment:
+      MYSQL_INIT_COMMAND: "SET GLOBAL local_infile = 'ON';"
+      MYSQL_DATABASE: "intuitive_care_db"
+      MYSQL_ROOT_PASSWORD: "dev"
+    command:
+      - --local-infile=1
+      - --secure-file-priv=/home/csv_files
+    ports:
+      - 9000:3306
+    volumes:
+      # Renomeei os nomes dos scripts pois o container docker executa os scripts da pasta /docker-entrypoint-initdb.d/ em ordem alfabetica
+      - "./src/scripts/estruturar_tabelas.sql:/docker-entrypoint-initdb.d/1.sql"
+      - "./src/scripts/popular_operadoras.sql:/docker-entrypoint-initdb.d/2.sql"
+      - "./src/scripts/popular_demonstracao_contabeis.sql:/docker-entrypoint-initdb.d/3.sql"
+      - "./src/scripts/data:/home/csv_files"
