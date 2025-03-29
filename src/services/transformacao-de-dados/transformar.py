@@ -63,7 +63,7 @@ def convert_table_to_csv(src_pdf: str, output_path: str):
 def main():
     src_path = Path(__file__).resolve().parents[1]
     path_to_pdf = (
-        src_path / "web-scraping/files/Anexo_I_Rol_2021RN_465.2021_RN627L.2024.pdf"
+        src_path / "web-scraping/data/Anexo_I_Rol_2021RN_465.2021_RN627L.2024.pdf"
     )
 
     csv_name = "table.csv"

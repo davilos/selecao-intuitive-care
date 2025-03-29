@@ -1,3 +1,5 @@
+import os
+
 from requests import get
 from zipfile import ZipFile, ZIP_DEFLATED
 
@@ -25,7 +27,7 @@ def download_file(url: str, file_name: str):
             if chunk:
                 file.write(chunk)
 
-    print(f"Arquivo {file_name.split("/")[-1]} baixado com sucesso!")
+    print(f"Arquivo {file_name.split('/')[-1]} baixado com sucesso!")
 
 
 def download_multiple_files(urls: list[str]):
@@ -33,7 +35,7 @@ def download_multiple_files(urls: list[str]):
         futures_list = []
 
         for url in urls:
-            save_path = "./files/"
+            save_path = "./data/"
             file_name = save_path + url.split("/")[-1]
             futures_list.append(executor.submit(download_file, url, file_name))
 
@@ -45,11 +47,14 @@ def download_multiple_files(urls: list[str]):
 
 
 def main():
+    save_path = "./data/"
+
+    os.makedirs(save_path, exist_ok=True)
+
     path_files = [
         "https://www.gov.br/ans/pt-br/acesso-a-informacao/participacao-da-sociedade/atualizacao-do-rol-de-procedimentos/Anexo_I_Rol_2021RN_465.2021_RN627L.2024.pdf",
         "https://www.gov.br/ans/pt-br/acesso-a-informacao/participacao-da-sociedade/atualizacao-do-rol-de-procedimentos/Anexo_II_DUT_2021_RN_465.2021_RN628.2025_RN629.2025.pdf",
     ]
-    save_path = "./files/"
 
     download_multiple_files(path_files)
 
