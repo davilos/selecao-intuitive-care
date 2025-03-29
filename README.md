@@ -7,6 +7,9 @@ CLIQUE AQUI NO [LINK](https://github.com/git-lfs/git-lfs?utm_source=gitlfs_site&
 
 E DEPOIS RODE O COMANDO `git lfs install`
 
+CASO NÃO SEJA DO SEU INTERESSE, POR FAVOR, COLOQUE OS ARQUIVOS `.csv` DESCRITOS NO "TESTE DE BANCO DE DADOS"
+NA PASTA `.src/scripts/data`.
+
 ## AMBIENTE DO PROJETO
 
 PARA OS DESAFIOS DE WEB SCRAPING E TRANSFORMAÇÃO DE DADOS, EU CRIEI UMA PASTA `.src/services`
