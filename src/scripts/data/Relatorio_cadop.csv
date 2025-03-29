@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Registro_ANS;CNPJ;Razao_Social;Nome_Fantasia;Modalidade;Logradouro;Numero;Complemento;Bairro;Cidade;UF;CEP;DDD;Telefone;Fax;Endereco_eletronico;Representante;Cargo_Representante;Regiao_de_Comercializacao;Data_Registro_ANS
 "419761";"19541931000125";"18 DE JULHO ADMINISTRADORA DE BENEFÍCIOS LTDA";;"Administradora de Benefícios";"RUA CAPITÃO MEDEIROS DE REZENDE";"274";;"PRAÇA DA BANDEIRA";"Além Paraíba";"MG";"36660000";"32";"34624649";;"contabilidade@cbnassessoria.com.br";"LUIZ HENRIQUE MARENDINO GONÇALVES";"SÓCIO ADMINISTRADOR";6;"2015-05-19"
 "421545";"22869997000153";"2B ODONTOLOGIA OPERADORA DE PLANOS ODONTOLÓGICOS LTDA";;"Odontologia de Grupo";"RUA CATÃO";"128";"SALA 126";"VILA ROMANA";"São Paulo";"SP";"05049000";"11";"34415852";;"labmarisol@gmail.com";"MARISOL BECHELLI";"SÓCIO ADMINISTRADORA";4;"2019-06-13"
@@ -1105,3 +1106,8 @@ Registro_ANS;CNPJ;Razao_Social;Nome_Fantasia;Modalidade;Logradouro;Numero;Comple
 "400882";"02811372000123";"ÁPICE ODONTO ASSISTÊNCIA ODONTOLÓGICA LTDA";"ÁPICE-ODONTO ASSISTÊNCIA ODONTOLÓGICA LTDA.";"Odontologia de Grupo";"R. ELPIDIO GOMES";"1262";;"CENTRO";"Sertãozinho";"SP";"14160620";"16";"39459143";"39459143";"apiceodonto@apiceodonto.com.br";"VANDERLEI DE SOUZA JUNIOR";"SÓCIO DIRETOR";6;"1999-02-19"
 "407534";"28023703000154";"ÔNIX OPERADORA DE PLANOS DE SAÚDE LTDA";"ÔNIX OPERADORA DE PLANOS DE SAÚDE LTDA";"Medicina de Grupo";"RUA SÃO JANUÁRIO";"468";;"VASCO DA GAMA";"Rio de Janeiro";"RJ";"20921003";"02";"124026388";"133016013";"grupoonix2006@yahoo.com.br";"CECI BANDEIRA DE MELO PEREIRA FILHA";"REPRESENTANTE LEGAL";4;"1999-08-23"
 "421944";"33379144000150";"ÚNICA ASSISTENCIA MEDICA LTDA ";;"Medicina de Grupo";"RUA BARATA RIBEIRO";"288";"TÉRREO";"VILA ITAPURA";"Campinas";"SP";"13015097";;;;"diretoria@unicassaude.com.br";"JOÃO BORGES LUCCHESI GONÇALVES";"SOCIO ADMINISTRADOR";5;"2019-12-03"
+=======
+version https://git-lfs.github.com/spec/v1
+oid sha256:7af0536546f8da2083bdaea61381687eb003881540c42264c80846ee40b184d9
+size 347095
+>>>>>>> f363975667e7ea2f86055da6577a8909f105c313
