@@ -14,7 +14,7 @@ services:
       - 9000:3306
     volumes:
       # Renomeei os nomes dos scripts pois o container docker executa os scripts da pasta /docker-entrypoint-initdb.d/ em ordem alfabetica
-      - "./src/scripts/estruturar_tabelas.sql:/docker-entrypoint-initdb.d/1.sql"
-      - "./src/scripts/popular_operadoras.sql:/docker-entrypoint-initdb.d/2.sql"
-      - "./src/scripts/popular_demonstracao_contabeis.sql:/docker-entrypoint-initdb.d/3.sql"
-      - "./src/scripts/data:/home/csv_files"
+      - "./server/src/scripts/estruturar_tabelas.sql:/docker-entrypoint-initdb.d/1.sql"
+      - "./server/src/scripts/popular_operadoras.sql:/docker-entrypoint-initdb.d/2.sql"
+      - "./server/src/scripts/popular_demonstracao_contabeis.sql:/docker-entrypoint-initdb.d/3.sql"
+      - "./server/src/scripts/data:/home/csv_files"
