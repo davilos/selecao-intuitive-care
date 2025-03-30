@@ -1,8 +1,41 @@
 import os
+import pandas as pd
+
 from requests import get
 from concurrent.futures import ThreadPoolExecutor, as_completed
-
 from zipfile import ZipFile
+
+import pandas as pd
+
+
+def parse_dates(data_series: pd.Series) -> pd.Series:
+    converted_dates = pd.to_datetime(data_series, format="%d/%m/%Y", errors="coerce", cache=True)
+
+    invalid_converted_dates = converted_dates.isna()
+
+    converted_dates.loc[invalid_converted_dates] = pd.to_datetime(
+        data_series[invalid_converted_dates], format="%Y-%m-%d", errors="coerce"
+    )
+
+    return converted_dates
+
+
+def clean_dataframe(file: str):
+    df = pd.read_csv(
+        file,
+        sep=";",
+        dtype={
+            "DATA": "string",
+        },
+    )
+
+    for col in ["VL_SALDO_INICIAL", "VL_SALDO_FINAL"]:
+        df[col] = df[col].apply(lambda x: str(x).replace(",", ".")).astype(float)
+
+    df["DATA"] = parse_dates(df["DATA"])
+
+    print(f"Arquivo {file} modificado com sucesso!")
+    df.to_csv(file, index=False, sep=";", date_format="%Y-%m-%d")
 
 
 def extract_files(file: str):
@@ -11,7 +44,7 @@ def extract_files(file: str):
 
     os.remove(file)
 
-    print("Arquivos extraídos com sucesso!")
+    print(f"Arquivo {file.split("/")[-1]} extraído com sucesso!")
 
 
 def download_file(url: str, file_name: str):
@@ -69,10 +102,24 @@ def main():
         "./data/4T2024.zip",
     ]
 
+    files_to_clean = [
+        "./data/1T2023.csv",
+        "./data/2t2023.csv",
+        "./data/3T2023.csv",
+        "./data/4T2023.csv",
+        "./data/1T2024.csv",
+        "./data/2T2024.csv",
+        "./data/3T2024.csv",
+        "./data/4T2024.csv",
+    ]
+
     download_multiple_files(urls)
 
     for file in files_to_extract:
         extract_files(file)
+
+    for file in files_to_clean:
+        clean_dataframe(file)
 
 
 if __name__ == "__main__":
