@@ -2,8 +2,12 @@ from services.fetch_many_operadoras import FetchManyOperadorasService
 from services.fetch_all_operadoras import FetchAllOperadorasService
 
 from flask import Flask, jsonify
+from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
+cors = CORS(app)
+
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
@@ -11,6 +15,7 @@ app.config['MYSQL_PASSWORD'] = 'dev'
 app.config['MYSQL_DB'] = 'intuitive_care_db'
 
 @app.route("/get-all-operadoras", methods=["GET"])
+@cross_origin()
 def get_all_operadoras():
   try:
     service = FetchAllOperadorasService()
@@ -34,6 +39,7 @@ def get_all_operadoras():
     return jsonify(response), 500
 
 @app.route("/get-operadoras", methods=["GET"])
+@cross_origin()
 def get_operadoras():
   try:
     service = FetchManyOperadorasService()
