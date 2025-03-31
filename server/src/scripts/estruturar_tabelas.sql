@@ -29,4 +29,10 @@ CREATE TABLE IF NOT EXISTS demonstracao_contabeis (
   DESCRICAO VARCHAR(200) NOT NULL,
   VL_SALDO_INICIAL DECIMAL(18, 2),
   VL_SALDO_FINAL DECIMAL(18, 2)
-)
+);
+
+ALTER TABLE demonstracao_contabeis
+ADD INDEX idx_dc_performance (CD_CONTA_CONTABIL, DATA, REG_ANS, VL_SALDO_FINAL);
+
+ALTER TABLE operadoras 
+ADD INDEX idx_operadoras_registro (Registro_ANS);
