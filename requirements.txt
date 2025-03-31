@@ -5,7 +5,8 @@ charset-normalizer==3.4.1
 click==8.1.8
 distro==1.9.0
 Flask==3.1.0
-Flask-MySQLdb==2.0.0
+Flask-SQLAlchemy==3.1.1
+greenlet==3.1.1
 idna==3.10
 itsdangerous==2.2.0
 Jinja2==3.1.6
@@ -17,11 +18,14 @@ packaging==24.2
 pandas==2.2.3
 pathspec==0.12.1
 platformdirs==4.3.7
+PyMySQL==1.1.1
 python-dateutil==2.9.0.post0
 pytz==2025.2
 requests==2.32.3
 six==1.17.0
+SQLAlchemy==2.0.40
 tabula-py==2.10.0
+typing_extensions==4.13.0
 tzdata==2025.2
 urllib3==2.3.0
 Werkzeug==3.1.3
