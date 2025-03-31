@@ -40,13 +40,13 @@ def get_all_operadoras():
                     "cep": op[11],
                 },
                 "contato": {
-                   "telefone": op[12],
+                    "telefone": op[12],
                     "fax": op[13],
                     "email": op[14],
                 },
                 "responsavel": {"nome": op[15], "cargo": op[16]},
                 "regiao_comercializacao": op[17],
-                "data_registro": op[18]
+                "data_registro": op[18],
             }
             operadoras.append(operadora)
 

@@ -9,7 +9,9 @@ import pandas as pd
 
 
 def parse_dates(data_series: pd.Series) -> pd.Series:
-    converted_dates = pd.to_datetime(data_series, format="%d/%m/%Y", errors="coerce", cache=True)
+    converted_dates = pd.to_datetime(
+        data_series, format="%d/%m/%Y", errors="coerce", cache=True
+    )
 
     invalid_converted_dates = converted_dates.isna()
 
