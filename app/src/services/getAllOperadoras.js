@@ -19,7 +19,5 @@ export const getAllOperadoras = () => {
     }
   }
 
-  console.log('operadoras:::', operadoras)
-
   return { operadoras, error, load }
 }
