@@ -6,18 +6,20 @@ export const getAllOperadoras = () => {
 
   const load = async () => {
     try {
-      let data = await fetch('https://jsonplaceholder.typicode.com/posts')
-
-      if (!data.ok) {
-        throw Error('Não foi possível carregar as operadoras')
-      }
-
-      operadoras.value = await data.json()
+      await fetch('http://127.0.0.1:5000/get-all-operadoras')
+        .then(function (response) {
+          return response.json()
+        })
+        .then(function (json) {
+          return (operadoras.value = json.data)
+        })
     } catch (error) {
       error.value = error.message
       console.log(error.value)
     }
   }
+
+  console.log('operadoras:::', operadoras)
 
   return { operadoras, error, load }
 }
